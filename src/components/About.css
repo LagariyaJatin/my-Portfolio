@@ -1,0 +1,67 @@
+.about {
+  padding-top: clamp(96px, 12vw, 150px);
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(40px, 6vw, 96px);
+  align-items: center;
+}
+
+.about__text {
+  margin-top: 28px;
+  color: var(--ink-2);
+  font-size: 16px;
+  max-width: 540px;
+}
+
+.about__content .tag-row {
+  margin-top: 28px;
+}
+
+.about__portrait {
+  display: flex;
+  justify-content: center;
+}
+
+.about__portrait-ring {
+  width: min(320px, 80%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #e9e2d6;
+  box-shadow:
+    0 24px 60px -24px rgba(26, 24, 21, 0.35),
+    0 0 0 10px var(--bg);
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+
+.about__portrait-ring:hover {
+  transform: scale(1.025);
+}
+
+.about__portrait-ring img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 860px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__portrait {
+    order: -1;
+    justify-content: flex-start;
+  }
+
+  .about__portrait-ring {
+    width: min(220px, 60%);
+    box-shadow:
+      0 18px 44px -20px rgba(26, 24, 21, 0.3),
+      0 0 0 8px var(--bg);
+  }
+}

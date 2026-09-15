@@ -1,0 +1,90 @@
+.cta {
+  padding-bottom: clamp(56px, 8vw, 96px);
+}
+
+.cta__panel {
+  position: relative;
+  overflow: hidden;
+  background: var(--dark);
+  border-radius: 20px;
+  padding: clamp(56px, 8vw, 96px) clamp(24px, 6vw, 80px);
+  text-align: center;
+  color: #fff;
+}
+
+.cta__glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 55% at 50% 0%, rgba(232, 98, 44, 0.16), transparent 70%),
+    radial-gradient(ellipse 45% 40% at 85% 100%, rgba(232, 98, 44, 0.08), transparent 70%);
+  pointer-events: none;
+}
+
+.cta__kicker {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+}
+
+.cta__title {
+  position: relative;
+  margin-top: 16px;
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4.6vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  max-width: 18ch;
+  margin-inline: auto;
+}
+
+.cta__sub {
+  position: relative;
+  margin-top: 16px;
+  color: var(--dark-text);
+  font-size: 15px;
+}
+
+.cta__actions {
+  position: relative;
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cta__socials {
+  position: relative;
+  margin-top: 44px;
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+}
+
+.cta__socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--dark-text);
+  transition: color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.cta__socials a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 560px) {
+  .cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+}

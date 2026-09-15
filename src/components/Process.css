@@ -1,0 +1,107 @@
+.process__timeline {
+  position: relative;
+  margin-top: clamp(48px, 6vw, 80px);
+}
+
+/* Horizontal connector line */
+.process__line {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: var(--line);
+  display: block;
+}
+
+.process__line-fill {
+  position: absolute;
+  inset: 0;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.4s var(--ease) 0.2s;
+}
+
+.reveal-up .process__line-fill,
+.is-visible .process__line-fill {
+  transform: scaleX(1);
+}
+
+.process__steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.process__step {
+  position: relative;
+  padding-top: 26px;
+}
+
+/* Dot on the line */
+.process__step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--bg);
+}
+
+.process__num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+
+.process__title {
+  margin-top: 8px;
+  font-family: var(--font-display);
+  font-size: 16.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.process__text {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--ink-2);
+  max-width: 24ch;
+}
+
+/* ----- Responsive ----- */
+
+@media (max-width: 860px) {
+  .process__line {
+    display: none;
+  }
+
+  .process__steps {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .process__step {
+    padding: 0 0 30px 30px;
+    border-left: 1.5px solid var(--line);
+  }
+
+  .process__step:last-child {
+    border-left-color: transparent;
+    padding-bottom: 0;
+  }
+
+  .process__step::before {
+    top: 3px;
+    left: -6px;
+    width: 10px;
+    height: 10px;
+  }
+}

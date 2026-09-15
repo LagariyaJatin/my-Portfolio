@@ -1,0 +1,108 @@
+/* Cursor system from cursor-animation-code-and-prompt.md — structure and
+   animation logic exactly as provided; only color/size adapted to the theme. */
+
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 44px;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    height 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  mix-blend-mode: difference;
+}
+
+.cursor-progress {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-90deg);
+}
+
+.cursor-progress-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 1.5;
+}
+
+.cursor-progress-bar {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5;
+  stroke-dasharray: 125.6; /* 2 * PI * 20 */
+  stroke-dashoffset: 125.6;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+.cursor-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cursor-arrow {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.5) rotate(-45deg);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* State: hovering a link */
+.cursor.is-link {
+  width: 56px;
+  height: 56px;
+}
+
+.cursor.is-link .cursor-dot {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.cursor.is-link .cursor-arrow {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* State: hovering media/image */
+.cursor.is-media {
+  width: 90px;
+  height: 90px;
+}
+
+.cursor.is-media .cursor-progress {
+  opacity: 0;
+}
+
+@media (hover: none) {
+  .cursor {
+    display: none;
+  }
+}
+
+/* Theme adaptation: hide the native cursor only while the tracker is active
+   (same fine-pointer + motion-allowed conditions the JS boots under) */
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  body:has(.cursor),
+  body:has(.cursor) a,
+  body:has(.cursor) button {
+    cursor: none;
+  }
+}
