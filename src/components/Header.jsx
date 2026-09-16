@@ -48,7 +48,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <a ref={ctaRef} href="#contact" className="btn btn--dark header__cta" data-cursor="link">
+        <a ref={ctaRef} href="https://wa.me/919913987262?text=Hi%20Jatin!%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noreferrer" className="btn btn--dark header__cta" data-cursor="link">
           Let&apos;s Talk
           <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">
             <path
@@ -88,7 +88,7 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <a href="#contact" className="btn btn--dark header__sheet-cta" data-cursor="link" onClick={close}>
+        <a href="https://wa.me/919913987262?text=Hi%20Jatin!%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noreferrer" className="btn btn--dark header__sheet-cta" data-cursor="link" onClick={close}>
           Let&apos;s Talk
           <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">
             <path

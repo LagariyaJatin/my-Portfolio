@@ -162,6 +162,10 @@
   font-size: 16px;
 }
 
+.hero__sub + .hero__sub--second {
+  margin-top: 10px;
+}
+
 .hero__actions {
   margin-top: 34px;
   display: flex;
@@ -208,7 +212,7 @@
 }
 
 .hero__card-status {
-  color: var(--accent);
+  color: #3d9a50;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -219,7 +223,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--accent);
+  background: #3d9a50;
 }
 
 .hero__card-title {

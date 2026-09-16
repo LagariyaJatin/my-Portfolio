@@ -4,23 +4,23 @@ import './Method.css'
 const STEPS = [
   {
     num: '01',
-    title: 'THE PROBLEM',
-    text: 'Mapping the business challenges, technical constraints, and exact user pain points.',
+    title: 'THE IDEA',
+    text: 'I start by understanding your business, your goals, your audience, and what you want your website to achieve.',
   },
   {
     num: '02',
     title: 'THE APPROACH',
-    text: 'Defining the interface architecture, testing performance scenarios, and aligning layout systems.',
+    text: 'I plan the structure, content, layout, and overall look of the website before moving into development.',
   },
   {
     num: '03',
-    title: 'THE SOLUTION',
-    text: 'Writing clean, semantic, optimized frontend code with highly maintainable design patterns.',
+    title: 'THE BUILD',
+    text: 'I turn the plan into a responsive website with clean design, smooth interactions, and a great experience across devices.',
   },
   {
     num: '04',
-    title: 'THE RESULT',
-    text: 'Rigorous Lighthouse performance audits, fluid cross-device responsiveness, and target conversion met.',
+    title: 'THE LAUNCH',
+    text: 'After testing the website across different screen sizes, I deploy it and make sure everything is ready to go live.',
   },
 ]
 
@@ -29,13 +29,13 @@ export default function Method() {
     <section className="section section--alt method">
       <div className="container">
         <span className="kicker reveal-up">
-          <span className="tick">02</span>
-          {'// CASE STUDY METHOD'}
+          <span className="tick">03</span>
+          {'// HOW I WORK'}
         </span>
-        <h2 className="h2 reveal-up">More Than Just Writing Code</h2>
+        <h2 className="h2 reveal-up">From Idea to Live Website</h2>
         <p className="section-sub reveal-up">
-          I frame projects around business objectives, solid engineering blueprints, and
-          end-user goals.
+          I take a project from the initial idea to a finished website, keeping the
+          process simple, clear, and focused on your goals.
         </p>
 
         <div className="method__grid">

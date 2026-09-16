@@ -63,15 +63,19 @@ export default function Hero() {
             Available for freelance projects
           </p>
           <p className="hero__role reveal-hero" style={{ '--hd': '120ms' }}>
-            WEB DEVELOPER · DESIGNER
+            WEB DEVELOPER · FREELANCER
           </p>
           <h1 className="hero__title" style={{ '--hd': '260ms' }}>
-            <Words text="I build websites that turn ideas into digital experiences" />
+            <Words text="I Build Websites That Help Businesses Stand Out" />
           </h1>
           <p className="hero__sub reveal-hero" style={{ '--hd': '560ms' }}>
-            I&apos;m Jatin, a web developer focused on building fast, modern and
-            responsive websites and web applications for businesses, startups and
-            individuals.
+            I&apos;m Jatin, a web developer. I create modern, responsive websites for
+            businesses, startups and individuals looking to build a professional
+            online presence.
+          </p>
+          <p className="hero__sub hero__sub--second reveal-hero" style={{ '--hd': '600ms' }}>
+            From design and development to deployment, I turn ideas into websites
+            that are clean, user-friendly, and built around your goals.
           </p>
           <div className="hero__actions reveal-hero" style={{ '--hd': '660ms' }}>
             <MagneticLink href="#work" className="btn btn--dark" data-cursor="link">
@@ -86,8 +90,17 @@ export default function Hero() {
                 />
               </svg>
             </MagneticLink>
-            <MagneticLink href="#contact" className="btn btn--ghost" data-cursor="link">
-              Let&apos;s Talk
+            <MagneticLink href="https://wa.me/919913987262?text=Hi%20Jatin!%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noreferrer" className="btn btn--ghost" data-cursor="link">
+              Start a Project
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path
+                  d="M2 10L10 2M10 2H4M10 2V8"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </MagneticLink>
           </div>
         </div>
@@ -99,12 +112,12 @@ export default function Hero() {
           aria-label="Code architecture card"
         >
           <div className="hero__card-top">
-            <span className="hero__card-path">SYSTEM_INDEX // 01</span>
-            <span className="hero__card-status">ACTIVE</span>
+            <span className="hero__card-path">JATIN // WEB DEVELOPER</span>
+            <span className="hero__card-status">AVAILABLE</span>
           </div>
-          <p className="hero__card-title">Engineering pristine digital architectures.</p>
+          <p className="hero__card-title">Websites that make a strong first impression.</p>
           <p className="hero__card-sub">
-            Responsive layouts structured on a solid 8pt pixel grid for flawless alignment.
+            Clean design, responsive layouts, and a smooth experience across every screen.
           </p>
           <div className="hero__chart" aria-hidden="true">
             {BARS.map((b, i) => (

@@ -2,10 +2,9 @@ import portrait from '../assets/portrait.jpg'
 import './About.css'
 
 const TAGS = [
-  'Based in India',
   'Web Development',
   'UI Implementation',
-  'Freelance & Collaborations',
+  'Freelance Projects',
 ]
 
 export default function About() {
@@ -14,16 +13,20 @@ export default function About() {
       <div className="container about__grid">
         <div className="about__content">
           <span className="kicker reveal-up">
-            <span className="tick">03</span>
+            <span className="tick">01</span>
             {'// ABOUT ME'}
           </span>
-          <h2 className="h2 reveal-up">More Than Just Code</h2>
+          <h2 className="h2 reveal-up">I Turn Business Ideas Into Websites</h2>
           <p className="about__text reveal-up">
-            I&apos;m a web developer who enjoys turning ideas and business requirements
-            into clean, functional digital experiences. I focus on creating websites
-            that are visually polished, responsive, fast and easy to use. I enjoy
-            taking projects from an initial idea through design, development and
-            deployment.
+            I&apos;m a web developer and CSE student based in Gujarat, India. I create
+            modern, responsive websites for businesses, startups, and individuals
+            looking to build a professional online presence.
+          </p>
+          <p className="about__text reveal-up">
+            From the first idea to the final deployment, I handle the process of
+            designing, developing, and launching the website. My focus is on clean
+            design, smooth user experience, mobile responsiveness, and websites that
+            help businesses present themselves better online.
           </p>
           <div className="tag-row reveal-up">
             {TAGS.map((t) => (

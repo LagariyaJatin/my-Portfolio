@@ -44,7 +44,7 @@ export default function Projects() {
     <section id="work" className="section projects">
       <div className="container">
         <span className="kicker reveal-up">
-          <span className="tick">01</span>
+          <span className="tick">02</span>
           {'// SELECTED WORK'}
         </span>
         <h2 className="h2 reveal-up">
