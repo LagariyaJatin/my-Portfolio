@@ -33,7 +33,8 @@ export default function Header() {
   const close = () => setOpen(false)
 
   return (
-    <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
+    <>
+      <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
       <div className="container header__inner">
         <a href="#top" className="header__logo" onClick={close}>
           <span className="header__logo-mark" aria-hidden="true" />
@@ -72,9 +73,13 @@ export default function Header() {
           <span />
         </button>
       </div>
+    </header>
 
-      {/* Mobile menu */}
-      <div className={`header__sheet ${open ? 'is-open' : ''}`}>
+      {/* Mobile menu — rendered OUTSIDE <header> on purpose: the header's
+          backdrop-filter makes it the containing block for fixed children,
+          which collapsed this sheet to zero height. As a sibling it anchors
+          to the real viewport again. */}
+      <div className={`header__sheet ${open ? 'is-open' : ''}`} aria-hidden={!open}>
         <nav className="header__sheet-nav" aria-label="Mobile">
           {LINKS.map((l, i) => (
             <a
@@ -101,6 +106,6 @@ export default function Header() {
           </svg>
         </a>
       </div>
-    </header>
+    </>
   )
 }

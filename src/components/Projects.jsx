@@ -8,6 +8,8 @@ const PROJECTS = [
     num: '01',
     kicker: 'Business Website',
     title: 'Classy Messi',
+    url: 'https://classymessi.netlify.app/',
+    external: true,
     description:
       'A modern website designed to give a manufacturing business a stronger online presence and make its products easier to discover.',
     tags: ['React', 'Tailwind', 'Responsive'],
@@ -19,6 +21,8 @@ const PROJECTS = [
     num: '02',
     kicker: 'Web Application',
     title: 'AI Learning Platform',
+    url: 'https://ailearningplatform1.netlify.app/',
+    external: true,
     description:
       'An interactive learning platform that uses AI to create personalized learning experiences.',
     tags: ['React', 'Node.js', 'Firebase'],
@@ -30,6 +34,8 @@ const PROJECTS = [
     num: '03',
     kicker: 'Experimental / Personal',
     title: 'Creative Web Experience',
+    url: '#work',
+    external: false,
     description:
       'A creative web experience focused on interaction, storytelling and modern frontend development.',
     tags: ['JavaScript', 'GSAP', 'Three.js'],
@@ -60,7 +66,13 @@ export default function Projects() {
               key={p.num}
               className={`project project-card card reveal-up ${p.reverse ? 'project--reverse' : ''}`}
             >
-              <a href="#work" className="project__media-link" aria-label={`View ${p.title} case study`} data-cursor="media">
+              <a
+                href={p.url}
+                className="project__media-link"
+                aria-label={`View ${p.title} case study`}
+                data-cursor="media"
+                {...(p.external ? { target: '_blank', rel: 'noreferrer' } : {})}
+              >
                 <span className="project__media">
                   <img src={p.image} alt={p.alt} loading="lazy" />
                   <span className="project__overlay">
@@ -95,7 +107,12 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                <a href="#work" className="project__link" data-cursor="link">
+                <a
+                  href={p.url}
+                  className="project__link"
+                  data-cursor="link"
+                  {...(p.external ? { target: '_blank', rel: 'noreferrer' } : {})}
+                >
                   View Case Study
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                     <path

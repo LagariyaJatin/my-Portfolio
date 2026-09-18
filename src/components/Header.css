@@ -123,10 +123,16 @@
 
 /* ----- Mobile sheet ----- */
 
+/* Rendered as a sibling of <header> (see Header.jsx): the header's
+   backdrop-filter makes IT the containing block for fixed children, which
+   collapsed this sheet to zero height and left menu links floating with no
+   background. As a sibling, `fixed` resolves against the real viewport. */
 .header__sheet {
   position: fixed;
   inset: 64px 0 0 0;
-  background: var(--bg);
+  z-index: 99; /* fills the viewport below the fixed bar (z-index: 100) */
+  background: var(--bg); /* same opaque page background as the hero */
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   padding: 32px var(--gutter) 40px;

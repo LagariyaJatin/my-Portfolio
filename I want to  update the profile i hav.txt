@@ -1,0 +1,4 @@
+I want to  update the profile i have given you the new photo as named as 
+LinkedIn PFP so update that. AND ALSO 
+When someone clicks on View Case Study at the Classy Messi in  the Featured Projects it should redirect them to this link : https://classymessi.netlify.app/
+
